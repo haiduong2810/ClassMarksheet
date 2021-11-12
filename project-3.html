@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project-3.css">
+    <title>Class Marksheet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h1>Class Marksheet</h1>
+
+    <!-- Người dùng nhập thông tin để thêm học sinh -->
+    <div class="container">
+        <form class="row g-2 mx-auto">
+            <div>
+                <label for="name" class="form-label">Họ tên</label>
+                <input type="text" id="name" pattern="^(?=.*\S).+$" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label for="math" class="form-label">Điểm toán</label>
+                <input type="number" id="math" class="form-control" step="any" min="0" max="10" required>
+            </div>
+            <div class="col-md-4">
+                <label for="physical" class="form-label">Điểm lý</label>
+                <input type="number" id="physical" class="form-control" step="any" min="0" max="10" required>
+            </div>
+            <div class="col-md-4">
+                <label for="chemistry" class="form-label">Điểm hóa</label>
+                <input type="number" id="chemistry" class="form-control" step="any" min="0" max="10" required>
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-lg btn-primary mx-auto" type="submit" id="btnScores">Nhập</button>
+            </div>
+        </form>
+        <div class="d-flex justify-content-start">
+            <p id="note">Chú ý: Hãy ấn vào ô STT để trở về bảng ban đầu</p>
+        </div>
+    </div>
+
+    <div>
+        <!-- Bảng hiển thị thông tin của học sinh -->
+        <table class="table table-bordered text-center table-hover" id="myTable">
+            <colgroup>
+                <col width="10%" span="1">
+                <col width="40%" span="1">
+                <col width="10%" span="3">
+                <col width="30%" span="2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th onclick="sort(0)">STT</th>
+                    <th>Họ tên</th>
+                    <th>Điểm toán</th>
+                    <th>Điểm lý</th>
+                    <th>Điểm hóa</th>
+                    <th> Trung bình</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Hải Đường</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vũ Đức Mạnh</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bùi Đức Minh</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>?</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col-md-4 m-1 m-md-0 d-flex justify-content-end"><button type="button" class="btn btn-primary " id="mediumScores">Tính điểm trung bình</button></div>
+            <div class="col-md-4 m-1 m-md-0 d-flex justify-content-start"><button type="button" class="btn  btn-primary " id="hsg">Xác định học sinh giỏi</button></div>
+            <div class="col-md-4 m-1 m-md-0 d-flex justify-content-start"><button type="button" class="btn  btn-primary " id="sortStudent">Sắp xếp học sinh theo ĐTB</button></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="project-3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+h1 {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    margin: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+}
+
+html {
+    font-size: 13px;
+}
+
+.container {
+    text-align: left;
+    margin: 5px;
+}
+
+#mediumScores,
+#hsg,
+#sortStudent {
+    width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+    form {
+        width: 50%;
+    }
+    .container {
+        text-align: center;
+        margin: 5px;
+    }
+    html {
+        font-size: 17px;
+    }
+}
+
+#note {
+    color: red;
+    display: none;
+}
